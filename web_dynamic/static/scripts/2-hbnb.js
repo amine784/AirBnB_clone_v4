@@ -26,20 +26,18 @@ $(document).ready(function () {
     $('div.amenities > h4').text(output);
     myList = [];
   });
-   /**
+  /**
      * Task 3:
      * Request http://0.0.0.0:5001/api/v1/status/:
      * - If in the status is “OK”, add the class available to the DIV#api_status
      * - Otherwise, remove the class available to the DIV#api_status
      * **/
-   let api_status = $('DIV#api_status');
-    $.ajax("http://0.0.0.0:5001/api/v1/status/").done(function(data){
-        if(data.status === "OK"){
-            api_status.addClass("available");
-        }
-        else{
-            api_status.removeClass("available");
-        }
-
-    });
+  const apiStatus = $('DIV#api_status');
+  $.ajax('http://0.0.0.0:5001/api/v1/status/').done(function (data) {
+    if (data.status === 'OK') {
+      apiStatus.addClass('available');
+    } else {
+      apiStatus.removeClass('available');
+    }
+  });
 });
