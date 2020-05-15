@@ -40,6 +40,9 @@ button:hover {
     margin-top: 0;
     font-weight: 400;
     font-size: 14px;
+    max-height: 16px;
+    min-height: 16px;
+    overflow: hidden;
 }
 .locations {
     height: 100%;
