@@ -2,7 +2,7 @@ const $ = window.$;
 $(document).ready(function () {
   const myAmenities = {};
   let myList = [];
-  const checkbox = $('input[type="checkbox"]');
+  const checkbox = $('.amenities input[type="checkbox"]');
   checkbox.prop('checked', false);
   checkbox.change(function () {
     const dataId = $(this).attr('data-id');
